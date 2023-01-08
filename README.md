@@ -1,374 +1,452 @@
 # Machine-Learning1
 List of machine Learning projects
 
-cn 
-1: Write a NS3 program to connect two nodes with a point to pint link, which have unique 
-interface. Analyze the network performance using UDP client server
+HTML 
+
+1:In today’s digital world, information dissemination through printed documents consume lot of time. To overcome this drawback it is better to adopt digital technology for information dissemination, like e- journals, e-books, e-advertisements, etc. Information dissemination through Internet in the form of web content is essential and convenient option. Design and develop static web pages for an online Book store. The pages should resemble like Error for Hyperlink reference not valid. Website should consist of Homepage, Registration & Login, User profile page, Books catalog, Shopping cart, Payment by credit card, and order confirmation.
+code:
+Main.html
+<html>
+<head>
+    <title>Main Page</title>
+    <style type="text/css">
+        a
+        {
+            color:Black;
+            font-size:large;    
+        }
+    </style>
+</head>
+<body style="background-image: url(BgImg2.jpg); background-repeat: no-repeat; background-size: 100%;">
+    <center>
+        <h1 style="color:White;">
+            Main Page</h1>
+        <br />
+        <p>
+            <b><a href="Home.html">Home</a></b>
+        </p>
+        <p>
+            <b><a href="SignUp.html">Register</a></b>
+        </p>
+        <p>
+            <b><a href="Order.html">Order</a></b>
+        </p>
+    </center>
+</body>
+</html>
+
+Home.html
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body  style="background-image: url(cbgimg1.jpg); background-repeat: no-repeat; background-size: 100%; color:White;">
+<center>
+    <h1>Welcome to e-Books</h1> 
+</center>
+  <p>Select your book</p>
+    <hr />
+<center>
+<p>
+<a href="CheckOut.html"><img src="BgImg1.jpg"  height="250" width="250" /></a>
+<a href="CheckOut.html"><img src="BgImg1.jpg"  height="250" width="250" /></a>
+<a href="CheckOut.html"><img src="BgImg1.jpg"  height="250" width="250" /></a>
+<a href="CheckOut.html"><img src="BgImg1.jpg"  height="250" width="250" /></a>
+<a href="CheckOut.html"><img src="BgImg1.jpg"  height="250" width="250" /></a>
+</p>
+</center>
+<center><a href="MainPage.html">Go to Main page</a></center>
+</body>
+</html>
+
+Checkout.html
+<html>
+<head>
+    <title>Checkout</title>
+</head>
+<body style="background-image: url(cbgimg1.jpg); background-repeat: no-repeat; background-size: 100%; color:White;">
+    <center><h1>Checkout</h1></center>
+    <p>Enter Card details</p>
+    <hr />
+    Card No : <input type="text" /> <br /><br />
+    Name on Card : <input type="text" /> <br /><br />
+    Expiry date : <select >
+        <option>2018</option>
+        <option>2019</option>
+        <option>2020</option>
+        <option>2021</option>
+    </select> <br /><br />
+    CVV No : <input type="text" /> <br /><br />
+    Amount paid : <input type="text" /> <br /><br />
+    <input type="submit" value="Submit" /><input type="reset" value="reset" /> <br />
+    <center>
+    <a href="MainPage.html">Go to Main Page</a>
+    </center>
+</body>
+</html>
+
+Order.html
+<html>
+<head>
+    <title>Order</title>
+</head>
+<body  style="background-image: url(cbgimg1.jpg); background-repeat: no-repeat; background-size: 100%; color:White;">
+    <center>
+        <h1>
+            Order</h1>
+    <hr />
+        <p>
+            Your Order</p>
+        <a href="MainPage.html">Go to Main Page</a></center>
+</body>
+</html>
+
+Signup.html
+<html>
+<head>
+    <title>Sign up</title>
+</head>
+<body style="background-image: url(cbgimg1.jpg); background-repeat: no-repeat; background-size: 100%; color:White;">
+<center><h1>Sign up</h1></center>
+    <p>Enter your details</p>
+    <hr />
+    First Name : <input type="text" /> <br /><br />
+    Last Name : <input type="text" /> <br /><br />
+    Email Id   : <input type="text" /> <br /><br />
+    User Id : <input type="text" /> <br /><br />
+    Password : <input type="password" /> <br /><br />
+    Phone No : <input type="text" /> <br /><br />
+    Day : <input type="text" /> <br /><br />
+    <input type="submit" value="Submit" /><input type="reset" value="reset" /> <br />
+    <center>
+    <a href="MainPage.html">Go to Main Page</a>
+    </center>
+</body>
+</html>
+
+
+2:Write an HTML page that has one input, which can take multi line text and a submit button. Once the user clicks the submit button, it should show the number of characters, words and lines in the text entered using an alert message. Words are separated with white space and lines are separated with new line character.
 
 code:
-#include "ns3/core-module.h""\m"
-#include "ns3/network-module.h"
-#include "ns3/internet-module.h"
-#include "ns3/point-to-point-module.h"
-#include "ns3/applications-module.h"
-#include "ns3/netanim-module.h"
-using namespace ns3;
-NS_LOG_COMPONENT_DEFINE ("FirstScriptExample");
-int
-main (int argc, char *argv[])
+
+2.html
+<html>
+<head>
+<script type="text/javascript">
+function countWCL() {
+var textarea=document.getElementById("tarea");
+var text = textarea.value;
+value = "Words: " + (text.split(/\b\S+\b/).length - 1) + " Characters: " + text.replace(/\s/g, "").length + "/" + text.replace(/\n/g, "").length + "lines:" + text.split("\n").length;
+alert(value); }
+</script></head>
+<form name="cwl">
+Enter Multi Line Text <br>
+<textarea name="string" id="tarea" rows=4 cols=30></textarea>
+<input type="button" name="sub" value="count" onClick="countWCL()">
+</form> </html>
+
+3:Internet or online services works on clients and server model. A client is a web browser through which users make requests, which contain input required, for service from the server to perform tasks. Server is a program running on a dedicated computer. Performance of any service or server depends on its throughput. Server throughput deteriorates when users send more and more invalid requests for service and thus results in wastage of server resources that are very precious. As a solution to this problem design a web page that takes student details such as Name, Semester, SRN, date of admission, email id and check for validity or correctness of the input data by writing a JavaScript to validate these fields.
+
+code:
+3.html
+<html>
+<head>
+<title>Student Registration</title>
+</head>
+<body>
+<div align="Left">
+<h1>Student Registration Portal</h1>
+<form id="xyz">
+<label for="name">Enter name: </label>
+<input type="text" id="name" /><br /><hr />
+<label for="dob">Select date of birth: </label>
+<input type="date" id="dob" /><br /><hr />
+<label for="branch">Enter branch: </label>
+<input type="text" id="branch" /><br /><hr />
+<label for="semester">Select Semester: </label>
+<input type="number" id="semester" max="8" min="0" /><br /><hr />
+<label for="doj">Select date of joining: </label>
+<input type="date" id="doj" /><br /><hr />
+<label for="university">Enter University Name: </label>
+<input type="text" id="university" /><br /><hr />
+<label for="mobile">Enter mobile number: </label>
+<input type="text" id="mobile" /><br /><hr />
+<label for="email_add">Enter email: </label>
+<input type="email" id="email_add" /><br /><hr />
+</form>
+<button onclick="validate()">Submit</button>
+<p> Result: <span id="result"></span> </p>
+</div>
+</body>
+<script>
+function validate() 
 {
- CommandLine cmd;
- cmd.Parse (argc, argv);
- Time::SetResolution (Time::NS);
- LogComponentEnable ("UdpEchoClientApplication", LOG_LEVEL_INFO);
- LogComponentEnable ("UdpEchoServerApplication", LOG_LEVEL_INFO);
- NodeContainer nodes;
- nodes.Create (2);
- PointToPointHelper pointToPoint;
- pointToPoint.SetDeviceAttribute ("DataRate", StringValue ("5Mbps"));
- pointToPoint.SetChannelAttribute ("Delay", StringValue ("2ms"));
- NetDeviceContainer devices;
- devices = pointToPoint.Install (nodes);
- InternetStackHelper stack;
- stack.Install (nodes);
- Ipv4AddressHelper address;
- address.SetBase ("10.1.1.0", "255.255.255.0");
-Ipv4InterfaceContainer interfaces = address.Assign (devices);
- UdpEchoServerHelper echoServer (9);
- ApplicationContainer serverApps = echoServer.Install (nodes.Get (1));
- serverApps.Start (Seconds (1.0));
- serverApps.Stop (Seconds (10.0));
- UdpEchoClientHelper echoClient (interfaces.GetAddress (1), 9);
- echoClient.SetAttribute ("MaxPackets", UintegerValue (1));
- echoClient.SetAttribute ("Interval", TimeValue (Seconds (1.0)));
- echoClient.SetAttribute ("PacketSize", UintegerValue (1024));
- ApplicationContainer clientApps = echoClient.Install (nodes.Get (0));
- clientApps.Start (Seconds (2.0));
- clientApps.Stop (Seconds (10.0));
- AnimationInterface anim ("first.xml");
- anim.SetConstantPosition(nodes.Get (0), 10.0, 10.0);
- anim.SetConstantPosition(nodes.Get (1), 20.0, 30.0);
- Simulator::Run ();
- Simulator::Destroy ();
- return 0;
+var result_text = document.getElementById("result");
+var dob = document.getElementById("dob").value;
+var birth_year = parseInt(dob.substring(0, 4));
+var doj = document.getElementById("doj").value;
+var join_year = parseInt(doj.substring(0,4));
+if (join_year - birth_year < 17) 
+{
+result_text.innerHTML = "Too young to have started college!"			
+return;			
 }
-
-execution: ./waf --run scratch/second
-
-2:Write a NS 3 program to demonstrate bus topology. Analyze the performance using UDP based 
-applications.
-
-code:
-#include "ns3/core-module.h"
-#include "ns3/network-module.h"
-#include "ns3/csma-module.h"
-#include "ns3/internet-module.h"
-#include "ns3/point-to-point-module.h"
-#include "ns3/applications-module.h"
-#include "ns3/ipv4-global-routing-helper.h"
-#include "ns3/netanim-module.h"
-using namespace ns3;
-NS_LOG_COMPONENT_DEFINE ("SecondScriptExample");
-int 
-main (int argc, char *argv[])
+var branch = document.getElementById("branch").value;
+if (branch.search(/(CSE|ECE|ME|CE|EEE|BCA|MCA)/i) == -1) 
 {
- bool verbose = true;
- uint32_t nCsma = 3;
- CommandLine cmd;
- cmd.AddValue ("nCsma", "Number of \"extra\" CSMA nodes/devices", nCsma);
- cmd.AddValue ("verbose", "Tell echo applications to log if true", verbose);
- cmd.Parse (argc,argv);
- if (verbose)
- {
- LogComponentEnable ("UdpEchoClientApplication", LOG_LEVEL_INFO);
- LogComponentEnable ("UdpEchoServerApplication", LOG_LEVEL_INFO);
- }
- nCsma = nCsma == 0 ? 1 : nCsma;
- NodeContainer p2pNodes;
- p2pNodes.Create (2);
- NodeContainer csmaNodes;
- csmaNodes.Add (p2pNodes.Get (1));
- csmaNodes.Create (nCsma);
- PointToPointHelper pointToPoint;
- pointToPoint.SetDeviceAttribute ("DataRate", StringValue ("5Mbps"));
- pointToPoint.SetChannelAttribute ("Delay", StringValue ("2ms"));
- NetDeviceContainer p2pDevices;
-p2pDevices = pointToPoint.Install (p2pNodes);
- CsmaHelper csma;
- csma.SetChannelAttribute ("DataRate", StringValue ("100Mbps"));
- csma.SetChannelAttribute ("Delay", TimeValue (NanoSeconds (6560)));
- NetDeviceContainer csmaDevices;
- csmaDevices = csma.Install (csmaNodes);
- InternetStackHelper stack;
- stack.Install (p2pNodes.Get (0));
- stack.Install (csmaNodes);
- Ipv4AddressHelper address;
- address.SetBase ("10.1.1.0", "255.255.255.0");
- Ipv4InterfaceContainer p2pInterfaces;
- p2pInterfaces = address.Assign (p2pDevices);
- address.SetBase ("10.1.2.0", "255.255.255.0");
- Ipv4InterfaceContainer csmaInterfaces;
- csmaInterfaces = address.Assign (csmaDevices);
- UdpEchoServerHelper echoServer (9);
- ApplicationContainer serverApps = echoServer.Install (csmaNodes.Get (nCsma));
- serverApps.Start (Seconds (1.0));
- serverApps.Stop (Seconds (10.0));
- UdpEchoClientHelper echoClient (csmaInterfaces.GetAddress (nCsma), 9);
- echoClient.SetAttribute ("MaxPackets", UintegerValue (3));
- echoClient.SetAttribute ("Interval", TimeValue (Seconds (1.0)));
- echoClient.SetAttribute ("PacketSize", UintegerValue (1024));
- ApplicationContainer clientApps = echoClient.Install (p2pNodes.Get (0));
- clientApps.Start (Seconds (2.0));
- clientApps.Stop (Seconds (10.0));
- Ipv4GlobalRoutingHelper::PopulateRoutingTables ();
- pointToPoint.EnablePcapAll ("p2p");
- csma.EnablePcap ("csma1", csmaDevices.Get (1), true);
- csma.EnablePcap ("csma2", csmaDevices.Get (2), true);
- csma.EnablePcap ("csma3", csmaDevices.Get (3), true);
- AnimationInterface anim("bus.xml");
- anim.SetConstantPosition(p2pNodes.Get(0),10.0,10.0);
- anim.SetConstantPosition(csmaNodes.Get(0),20.0,20.0);
- anim.SetConstantPosition(csmaNodes.Get(1),30.0,30.0);
- anim.SetConstantPosition(csmaNodes.Get(2),40.0,40.0);
- anim.SetConstantPosition(csmaNodes.Get(3),50.0,50.0);
- Simulator::Run ();
- Simulator::Destroy ();
- return 0;
+result_text.innerHTML = "Invalid branch!";
+return;			
 }
-
-execution: same as b4
-
-3:Write a NS 3 program to demonstrate star topology. Analyze the performance using UDP based 
-applications.
-
-code:
-#include "ns3/core-module.h"
-#include "ns3/network-module.h"
-#include "ns3/netanim-module.h"
-#include "ns3/internet-module.h"
-#include "ns3/point-to-point-module.h"
-#include "ns3/applications-module.h"
-#include "ns3/point-to-point-layout-module.h"
-using namespace ns3;
-NS_LOG_COMPONENT_DEFINE ("Star123");
-int 
-main (int argc, char *argv[])
+var mobile_no = document.getElementById("mobile").value;
+if (mobile_no.search(/^[0-9]+$/) == -1 || mobile_no.length != 10) 
 {
- //
- // Set up some default values for the simulation.
- //
- Config::SetDefault ("ns3::OnOffApplication::PacketSize", UintegerValue (137));
- // ??? try and stick 15kb/s into the data rate
- Config::SetDefault ("ns3::OnOffApplication::DataRate", StringValue ("14kb/s"));
- //
- // Default number of nodes in the star. Overridable by command line argument.
- //
- uint32_t nSpokes = 8;
- std::string animFile1 = "star-animation1.xml";
- CommandLine cmd;
- cmd.AddValue ("nSpokes", "Number of nodes to place in the star", nSpokes);
-cmd.AddValue ("animFile1", "File Name for Animation Output", animFile1);
- cmd.Parse (argc, argv);
- NS_LOG_INFO ("Build star topology.");
- PointToPointHelper pointToPoint;
- pointToPoint.SetDeviceAttribute ("DataRate", StringValue ("5Mbps"));
- pointToPoint.SetChannelAttribute ("Delay", StringValue ("2ms"));
- PointToPointStarHelper star (nSpokes, pointToPoint);
- NS_LOG_INFO ("Install internet stack on all nodes.");
- InternetStackHelper internet;
- star.InstallStack (internet);
- NS_LOG_INFO ("Assign IP Addresses.");
- star.AssignIpv4Addresses (Ipv4AddressHelper ("10.1.1.0", "255.255.255.0"));
- NS_LOG_INFO ("Create applications.");
-uint16_t port = 50000;
- Address hubLocalAddress (InetSocketAddress (Ipv4Address::GetAny (), port));
- PacketSinkHelper packetSinkHelper ("ns3::TcpSocketFactory", hubLocalAddress);
- ApplicationContainer hubApp = packetSinkHelper.Install (star.GetHub ());
- hubApp.Start (Seconds (1.0));
- hubApp.Stop (Seconds (10.0));
- //
- // Create OnOff applications to send TCP to the hub, one on each spoke node.
- //
- OnOffHelper onOffHelper ("ns3::TcpSocketFactory", Address ());
- onOffHelper.SetAttribute ("OnTime", StringValue 
-("ns3::ConstantRandomVariable[Constant=1]"));
- onOffHelper.SetAttribute ("OffTime", StringValue 
-("ns3::ConstantRandomVariable[Constant=0]"));
- ApplicationContainer spokeApps;
- for (uint32_t i = 0; i < star.SpokeCount (); ++i)
- {
- AddressValue remoteAddress (InetSocketAddress (star.GetHubIpv4Address (i), port));
- onOffHelper.SetAttribute ("Remote", remoteAddress);
- spokeApps.Add (onOffHelper.Install (star.GetSpokeNode (i)));
- }
- spokeApps.Start (Seconds (1.0));
- spokeApps.Stop (Seconds (10.0));
- NS_LOG_INFO ("Enable static global routing.");
- //
- // Turn on global static routing so we can actually be routed across the star.
- //
- Ipv4GlobalRoutingHelper::PopulateRoutingTables ();
- NS_LOG_INFO ("Enable pcap tracing.");
- //
- // Do pcap tracing on all point-to-point devices on all nodes.
- //
- pointToPoint.EnablePcapAll ("star123");
-// Set the bounding box for animation
- star.BoundingBox (1, 1, 100, 100);
- // Create the animation object and configure for specified output
- AnimationInterface anim (animFile1);
- NS_LOG_INFO ("Run Simulation.");
-Simulator::Run ();
- Simulator::Destroy ();
- NS_LOG_INFO ("Done.");
- return 0;
+result_text.innerHTML = "Invalid mobile number!";
+return;			
 }
-
-execution: same as b4
-
-4:Write a NS3 program to implement FTP using TCP bulk transfer, Analyze the performance 
-code:
-#include <string>
-#include <fstream>
-#include "ns3/core-module.h"
-#include "ns3/point-to-point-module.h"
-#include "ns3/internet-module.h"
-#include "ns3/applications-module.h"
-#include "ns3/network-module.h"
-#include "ns3/packet-sink.h"
-using namespace ns3;
-NS_LOG_COMPONENT_DEFINE ("TcpBulkSendExample");
-int
-main (int argc, char *argv[])
+var email = document.getElementById("email_add").value;			
+if (email.search(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/) == -1) 
 {
- bool tracing = false;
- uint32_t maxBytes = 0;
-// Allow the user to override any of the defaults at
-// run-time, via command-line arguments
- CommandLine cmd;
- cmd.AddValue ("tracing", "Flag to enable/disable tracing", tracing);
- cmd.AddValue ("maxBytes",
- "Total number of bytes for application to send", maxBytes);
- cmd.Parse (argc, argv);
-// Explicitly create the nodes required by the topology (shown above).
- NS_LOG_INFO ("Create nodes.");
- NodeContainer nodes;
- nodes.Create (2);
- NS_LOG_INFO ("Create channels.");
-// Explicitly create the point-to-point link required by the topology (shown above).
- PointToPointHelper pointToPoint;
- pointToPoint.SetDeviceAttribute ("DataRate", StringValue ("500Kbps"));
- pointToPoint.SetChannelAttribute ("Delay", StringValue ("5ms"));
- NetDeviceContainer devices;
- devices = pointToPoint.Install (nodes);
-// Install the internet stack on the nodes
- InternetStackHelper internet;
- internet.Install (nodes);
-// We've got the "hardware" in place. Now we need to add IP addresses.
- NS_LOG_INFO ("Assign IP Addresses.");
- Ipv4AddressHelper ipv4;
- ipv4.SetBase ("10.1.1.0", "255.255.255.0");
-Ipv4InterfaceContainer i = ipv4.Assign (devices);
- NS_LOG_INFO ("Create Applications.");
-// Create a BulkSendApplication and install it on node 0
- uint16_t port = 9; // well-known echo port number
- BulkSendHelper source ("ns3::TcpSocketFactory",
- InetSocketAddress (i.GetAddress (1), port));
- // Set the amount of data to send in bytes. Zero is unlimited.
- source.SetAttribute ("MaxBytes", UintegerValue (maxBytes));
- ApplicationContainer sourceApps = source.Install (nodes.Get (0));
- sourceApps.Start (Seconds (0.0));
- sourceApps.Stop (Seconds (10.0));
-// Create a PacketSinkApplication and install it on node 1
- PacketSinkHelper sink ("ns3::TcpSocketFactory",
- InetSocketAddress (Ipv4Address::GetAny (), port));
- ApplicationContainer sinkApps = sink.Install (nodes.Get (1));
- sinkApps.Start (Seconds (0.0));
- sinkApps.Stop (Seconds (10.0));
-// Set up tracing if enabled
- if (tracing)
- {
- AsciiTraceHelper ascii;
- pointToPoint.EnableAsciiAll (ascii.CreateFileStream ("tcp-bulk-send.tr"));
- pointToPoint.EnablePcapAll ("tcp-bulk-send", false);
- }
-// Now, do the actual simulation.
- NS_LOG_INFO ("Run Simulation.");
- Simulator::Stop (Seconds (10.0));
- Simulator::Run ();
- Simulator::Destroy ();
- NS_LOG_INFO ("Done.");
- Ptr<PacketSink> sink1 = DynamicCast<PacketSink> (sinkApps.Get (0));
- std::cout << "Total Bytes Received: " << sink1->GetTotalRx () << std::endl;
+result_text.innerHTML = "Invalid email ID";			
+return;			
+}
+alert('Successfully transmitted data!');
+result_text.innerHTML = "Success!";		
+}
+</script>
+</html>
 
-execution : same as b4
-
-5:Write a NS3 program to connect two nodes with a point to point link, which have unique 
-interface. Analyse the traffic control using TCP by changing suitable parameters.
-code:
-#include "ns3/core-module.h"
-#include "ns3/network-module.h"
-#include "ns3/internet-module.h"
-#include "ns3/point-to-point-module.h"
-#include "ns3/applications-module.h"
-#include "ns3/netanim-module.h"
-//step1: add the following header files
-#include "ns3/flow-monitor.h"
-#include "ns3/flow-monitor-helper.h"
-#include "ns3/traffic-control-module.h"
-using namespace ns3;
-NS_LOG_COMPONENT_DEFINE ("FirstScriptExample");
-int
-main (int argc, char *argv[])
-{
-//step2: declare the variable tracing
-bool tracing = false;
-CommandLine cmd;
- cmd.Parse (argc, argv);
  
- Time::SetResolution (Time::NS);
- LogComponentEnable ("UdpEchoClientApplication", LOG_LEVEL_INFO);
- LogComponentEnable ("UdpEchoServerApplication", LOG_LEVEL_INFO);
- NodeContainer nodes;
- nodes.Create (2);
- PointToPointHelper pointToPoint;
- pointToPoint.SetDeviceAttribute ("DataRate", StringValue ("5Mbps"));
- pointToPoint.SetChannelAttribute ("Delay", StringValue ("2ms"));
- NetDeviceContainer devices;
- devices = pointToPoint.Install (nodes);
- InternetStackHelper stack;
- stack.Install (nodes);
- Ipv4AddressHelper address;
- address.SetBase ("10.1.1.0", "255.255.255.0");
- Ipv4InterfaceContainer interfaces = address.Assign (devices);
- UdpEchoServerHelper echoServer (9);
- ApplicationContainer serverApps = echoServer.Install (nodes.Get (1));
- serverApps.Start (Seconds (1.0));
- serverApps.Stop (Seconds (10.0));
- UdpEchoClientHelper echoClient (interfaces.GetAddress (1), 9);
- echoClient.SetAttribute ("MaxPackets", UintegerValue (6));
- echoClient.SetAttribute ("Interval", TimeValue (Seconds (1.0)));
- echoClient.SetAttribute ("PacketSize", UintegerValue (1024));
- ApplicationContainer clientApps = echoClient.Install (nodes.Get (0));
- clientApps.Start (Seconds (2.0));
- clientApps.Stop (Seconds (10.0));
-//step3: add the following code for Flow monitor
-Ptr<FlowMonitor> flowMonitor;
-FlowMonitorHelper flowHelper;
-flowMonitor = flowHelper.InstallAll();
-Simulator::Stop(Seconds(10.0));
-if (tracing==true)
- {
- 
-pointToPoint.EnablePcapAll ("p2p");
-}
-Simulator::Run ();
-//step 4: add the following statement for xml file
-flowMonitor->SerializeToXmlFile("newprg6.xml", true, true);
- Simulator::Destroy ();
- return 0;
-}
+ 5: Develop and demonstrate JavaScript with POP-UP boxes and functions for the 
+    Following problems:
+a) Input: Click on Display Date button using onclick( ) function Output: Display date in the
+                textbox
+b) Input: A number n obtained using prompt Output: Factorial of n number using alert
+c) Input: A number n obtained using prompt Output: A multiplication table of numbers from 1 
+               to 10 of n using alert 
+d)Input: A number n obtained using prompt and add another number using confirm 
+Output: Sum of the entire n numbers using alert
 
-execution: ./waf --run scratch/newprg6
-           python flowmon-parse-results.py newprg6.xml
-           
+ code:
+ <html> 
+<body> 
+<title>date</title>
+<script> 
+function display(){ 
+var x="You have clicked"; 
+var d=new Date(); 
+var date=d.getDate(); 
+var month=d.getMonth(); 
+month++; 
+var year=d.getFullYear(); 
+document.getElementById("dis").value=date+"/"+month+"/"+year; 
+} 
+</script> 
+<form> 
+<input type="text" id="dis" /><br /> 
+<input type="button" value="Display Date" onclick="display()" /> 
+</form> 
+<body> 
+</html>
+
+ <html>
+<head>
+<title>Factorial</title>
+<script type="text/javascript">
+function factorialcalc() 
+ { 
+ var number = prompt("Enter a number" ) ;
+ var factorial = 1 ;
+ for (i=1; i <= number; i++) 
+ { 
+ factorial = factorial * i ;
+ } 
+ alert("The factorial of " + number + " is " + factorial) ;
+ } 
+ </script> 
+ </head> 
+<body><form name=frm> 
+<input type=button value='factorial' onclick="factorialcalc();"> 
+</form> 
+</body> 
+</html>
+
+ <html> 
+ <head><title> Multiplication Table </title></head> 
+ <body> 
+ <script type="text/javascript"> 
+ var n=prompt("Enter positive value for n: "," "); 
+if(!isNaN(n)) { 
+ var table=""; 
+ var number=""; 
+ for(i=1;i<=10;i++) { 
+ number = n * i; 
+ table += n + " * " + i + " = " + number + "\n"; 
+ } 
+ alert(table); 
+ } 
+ else { 
+ alert("Enter positive value"); 
+ n=prompt("Enter positive value for n: "," "); 
+} 
+document.write(n+" table values displayed using alert ..<br />"); 
+</script> 
+</body> 
+</html>
+
+<html> 
+ <head><title>sum of n numbers using popup boxes</title> 
+ <script type="text/javascript"> 
+function addsum() 
+ { 
+ alert("you're going to give me a list of numbers. i'm going to add them together for you"); 
+ var keepgoing = true; 
+ var sumofnums = 0; 
+ while (keepgoing) { 
+ sumofnums = sumofnums + (parseInt(prompt("what's the next number to add?",""))) ;
+ keepgoing = confirm("add another number?") ;
+ } 
+alert("the sum of all your numbers is " + sumofnums) ;
+ } 
+</script> 
+</head> 
+<body> 
+ <form name=frm> 
+ <input type=button value='sum of n numbers' onclick="addsum();"> 
+ </form> 
+</body> 
+</html>
+
+
+  6:PHP is a server scripting language, tool for making and powerful dynamic and interactive Web pages. Write a PHP program to store current date-time in a COOKIE and display the Last visited on date-time.
+
+6.html
+<html >
+<head> <title>Cookies</title> </head>
+<body>
+<form action= “6.php" method="post">
+<p> The last visited time was <input type="submit" value="Display Now"/> </p>
+</form>
+</body>
+</html>
+
+6.php
+<?php
+$present_time=date(“H:i:s-m/d/y”);
+$expiry= 60 * 60 *24 *60 + time();
+setcookie("Lastvisit",$present_time, $expiry);
+if(isset($_COOKIE[“Lastvisit”]))
+{
+echo "Cookie has been set";
+echo “The current time of the system is”;
+echo $present_time;
+echo "The Last visited Time and Date";
+echo $_COOKIE["Lastvisit"];
+}
+else
+echo ”You’ve got some old cookies!”;
+?>
+
+                        
+7:PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML. Write a PHP program to store page views count in SESSION, to increment the count on each refresh, and to show the count on web page.
+
+7.html
+<html>
+<head> <title>SESSION PROGRAM </title> </head>
+<body>
+<form action=" 7.php" method="post">
+<p> To see page views count in session <input type="submit" value="Click Here"/> </p>
+</form>
+</body>
+</html>
+
+7.php
+<?php
+session_start();
+if (!isset($_SESSION))
+{
+$_SESSION["count"] = 1;
+echo "<p>Counter initialized</p>\n";
+}
+else { $_SESSION["count"]++; }
+echo "<p>This page has been viewed <b>$_SESSION[count]</b> times.</p>".
+"<p>reload this page to increment</p>";
+?>
+
+ 8:In any business organization, employees keep traveling across different geographical locations and at the same time they want to be connected to server, file server, etc. to retrieve information such as sales details, assigning tasks to employees, and upload inspection site details, so on. Using PHP develop a web page that accepts book information such as ISBN number, title, authors, edition and publisher and store information submitted through web page in MySQL database. Design another web page to search for a book based on book title specified by the user and displays the search results with proper headings.
+ 
+ code:
+ 
+ 8.html
+ <html>
+<head>
+<title>helo</title>
+</head>
+<body>
+<form action="book-insert.php" method="post">
+<p>ISBN : <input type="text" name="ISBN"/><br/><br/>
+Title : <input type="text" name="Title"/><br/><br/>
+Authors : <input type="text" name="Authors"/><br/><br/>
+Publisher : <input type="text" name="Publisher"/><br/><br/>
+<input type="submit" value="submit"/>
+</p>
+</form>
+</body>
+</html>
+ 
+ book-insert.php
+ 
+ <html>
+<head><title> book insert</title>
+</head>
+<body>
+<?php
+$conn=new mysqli("localhost","root","","table");
+if($conn->connect_error)
+{
+echo "could not connect";
+}
+else
+{echo "connected succesfully";
+}
+$query="INSERT INTO book (ISBN,Title,Authors,Publisher) VALUES ('$_POST[ISBN]','$_POST[Title]','$_POST[Authors]','$_POST[Publisher]')";
+if($conn->query($query)===TRUE)
+{echo " executed query";
+
+}
+else
+{
+echo "not succesfully executed";
+}
+$conn->close();
+?>
+<form action="book-result.php" method="post">
+<p>Search for book: <input type="text" placeholder="book name" name="book"/></p>
+<input type="submit" value="submit">
+</form>
+</body>
+</html>
+ 
+ book-result.php
+ 
+ <?php
+$conn=new mysqli("localhost","root","","table");
+if($conn->connect_error)
+{
+echo "could not connect";
+}
+else 
+{echo "connected succesfully";
+}
+$sql="SELECT * FROM book WHERE Title='$_POST[book]'";
+$result=$conn->query($sql);
+if($result->num_rows > 0)
+{while($row=$result->fetch_assoc())
+{echo "Title: ".$row["Title"]."<br>";
+}
+}
+else{
+echo "0 results";
+}
+$conn->close();
+?>
+ 
